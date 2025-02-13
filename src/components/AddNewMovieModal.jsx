@@ -8,17 +8,11 @@ const AddNewMovieModal = ({open, onClose}) => {
         <div onClick={onClose} 
         className={`fixed inset-0 flex justify-center items-center transition-colors ${open ? "visible backdrop-blur-sm bg-black/20" : "invisible"}`}>
             <div onClick={(e) => e.stopPropagation()} className= {`bg-neutral-500 rounded-xl p-6 shadow transition-all ${open ?"scale-100 opacity-100" : "scale-125 opacity-0"}`}>
-            
-                {/* <button className='absolute top-2 right-2 rounded-lg text-gray-400 hover:bg-gray-50 hover:text-gray-600' onClick={onClose}>
-                    <X />
-                </button> */}
-
-                
-
+                          
                 <div className='w-100 flex flex-col'>
                     <div id='modal-title' className='flex justify-between pb-2'>
                         <h3 className='text-xl font-semibold text-neutral-100'>Add New Movie:</h3>
-                        <button className='text-white text-xl place-self-end cursor-pointer' onClick={onClose} >X</button>
+                        <button className='text-white text-xl place-self-end cursor-pointer hover:text-red-700' onClick={onClose} >X</button>
                     </div>
                     
                     <div id ='modal-content'className='text-black p-2 rounded '>

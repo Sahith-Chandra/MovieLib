@@ -6,7 +6,7 @@ import { CircleUserRound } from 'lucide-react';
 import AddNewMovieModal from './AddNewMovieModal'
 import { Trash2 } from 'lucide-react';
 
-const Navbar = ({setOpen}) => {
+const Navbar = ({open, setOpen}) => {
 
     const [profileNav, setProfileNav] = useState(false)
     const [displayInfo, setDisplayInfo] = useState(false)
@@ -24,7 +24,7 @@ const Navbar = ({setOpen}) => {
 
   return (
     <>
-        <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 bg-neutral-950 rounded-2xl">
+        <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 rounded-2xl">
             <div className='flex items-center justify-between'>
                 <div className='flex items-center'>
                     <img className = "h-12 mr-2" src={MovieLibLogo} alt="logo"/>
@@ -46,7 +46,7 @@ const Navbar = ({setOpen}) => {
                         </span>
                         <span class="relative text-xl text-white">Add New Movie</span>
                     </a> */}
-                        <button onClick={() => setOpen(true)}
+                        <button onClick={() => setOpen(!open)}
                         className='text-xl bg-gradient-to-r from-yellow-400 to-yellow-600 py-2 px-6 rounded-4xl font-semibold cursor-pointer transition-all duration-400 ease-in-out transform hover:px-7.5 hover:py-3.5 Hover:shadow-xl'>
                             Add New Movie
                         </button>
