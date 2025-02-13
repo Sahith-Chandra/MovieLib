@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Italiana';
+  src: url('./assets/fonts/Italiana-Regular.ttf') format('truetype');
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color-scheme: dark;
+}
+
+.font-italiana {
+  font-family: 'Italiana', serif;
+}
+
